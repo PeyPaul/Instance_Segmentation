@@ -11,7 +11,7 @@ segmentation_model.load_model('mask_rcnn_coco.h5')
 
 ### Real Time Capture
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0) # vlue to change if we want to use other things than the webcam
 while cap.isOpened():
     ret, frame = cap.read()
     
