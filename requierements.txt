@@ -1,0 +1,2 @@
+Once we are connected to a python environement, we need to run the following code in the bash terminal :
+pip install tensorflow==2.4.1 tensorflow-gpu==2.4.1 pixellib opencv-python
