@@ -6,19 +6,21 @@ import cv2
 
 ### Setup model
 
+
 segmentation_model = instance_segmentation()
+segmentation_model.save('mask_rcnn_coco.h5', save_format='tf')
 segmentation_model.load_model('mask_rcnn_coco.h5')
 
 ### Real Time Capture
 
-cap = cv2.VideoCapture(0) # vlue to change if we want to use other things than the webcam
-while cap.isOpened():
-    ret, frame = cap.read()
+#cap = cv2.VideoCapture(1) # vlue to change if we want to use other things than the webcam
+#while cap.isOpened():
+#    ret, frame = cap.read()
     
-    cv2.imshow('Instance Segmentation', frame)
+#    cv2.imshow('Instance Segmentation', frame)
     
-    if cv2.waitKey(10) & 0xFF == ord('q'):
-        break
+#    if cv2.waitKey(10) & 0xFF == ord('q'):
+#        break
     
-cap.release()
-cv2.destroyAllWindows()
+#cap.release()
+#cv2.destroyAllWindows()
