@@ -6,10 +6,9 @@ import cv2
 
 ### Setup model
 
-
 segmentation_model = instance_segmentation()
-segmentation_model.save('mask_rcnn_coco.h5', save_format='tf')
 segmentation_model.load_model('mask_rcnn_coco.h5')
+
 
 ### Real Time Capture
 
